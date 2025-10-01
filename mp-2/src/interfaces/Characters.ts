@@ -6,6 +6,6 @@ export interface Character {
     status: string;
     // Additional fields
     gender: string;
-    origin: string;
+    type: string;
     episode: [];
 }
