@@ -15,18 +15,18 @@ const SingleCharDiv=styled.div<{status: string}>`
     max-width: 30%;
     padding: 2%;
     margin: 1%;
-    background-color: ${(props)=>(props.status === "Alive" ? 'darkorange' : 'black')};
-    color: ${(props) => (props.status !== "Alive" ? 'white' : 'black')};
+    background-color: ${(being)=>(being.status === "Alive" ? 'matcha' : 'soft-red')};
+    color: ${(being) => (being.status !== "Alive" ? 'matcha' : 'soft-red')};
     border: 3px darkred solid;
     font: italic small-caps bold calc(2px + 1vw) Papyrus, fantasy;
     text-align: center;
 `;
 
-export default function RickAndMorty(props : { data:Character[] } ){
+export default function RickAndMorty(being : { data:Character[] } ){
     return (
         <AllCharsDiv >
             {
-                props.data.map((char: Character) =>
+                being.data.map((char: Character) =>
                     <SingleCharDiv key={char.id} status={char.status}>
                         <h1>{char.name}</h1>
                         <p>{char.species !== "Human" ? "(Not Human)" : ""} - {char.gender}</p>
