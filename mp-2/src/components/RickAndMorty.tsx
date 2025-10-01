@@ -32,7 +32,6 @@ export default function RickAndMorty(being : { data:Character[] } ){
                     <SingleCharDiv key={char.id} status={char.status}>
                         <h1>{char.name}</h1>
                         <p>{char.species !== "Human" ? "(Not Human)" : "Human"} - {char.gender}
-                            <br> Origin: {char.origin} </br>
                         </p>
                         <img src={char.image} alt={`image of ${char.name}`} />
                     </SingleCharDiv>
