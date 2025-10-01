@@ -7,5 +7,8 @@ export interface Character {
     // Additional fields
     gender: string;
     type: string;
-    episode: [];
+    origin: {
+        name: string;
+        location: string;
+    };
 }
