@@ -15,7 +15,6 @@ const SingleCharDiv=styled.div<{status: string}>`
     max-width: 30%;
     padding: 2%;
     margin: 1%;
-    border-radius: 20px;
     background-color: ${(being)=>(being.status === "Alive" ? 'green' : (being.status === "Dead") ? 'red' : 'yellow')};
     color: ${(being) => (being.status === "Alive" ? 'green' : (being.status === "Dead") ? 'red' : 'yellow')};
     text-shadow: ${(being) => (being.status === "Alive" ? 'green 0 0 10px;' : (being.status === "Dead") ? 'red 0 0 10px' : 'yellow 0 0 10px')};
