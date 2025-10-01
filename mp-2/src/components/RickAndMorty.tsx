@@ -18,7 +18,7 @@ const SingleCharDiv=styled.div<{status: string}>`
     background-color: ${(being)=>(being.status === "Alive" ? 'green' : (being.status === "Dead") ? 'red' : 'yellow')};
     color: ${(being) => (being.status === "Alive" ? 'green' : (being.status === "Dead") ? 'red' : 'yellow')};
     text-shadow: ${(being) => (being.status === "Alive" ? 'green 0 0 10px;' : (being.status === "Dead") ? 'red 0 0 10px' : 'yellow 0 0 10px')};
-    border: 3px darkred solid;
+    border: 3px saddlebrown solid;
     font: normal bold calc(2px + 1vw) "Comic Sans MS", cursive, sans-serif;
     text-align: center;
 `;
@@ -30,6 +30,7 @@ export default function RickAndMorty(being : { data:Character[] } ){
                 being.data.map((char: Character) =>
                     <SingleCharDiv key={char.id} status={char.status}>
                         <h1>{char.name}</h1>
+                        <h2>Origin: {char.origin}</h2>
                         <p>{char.species !== "Human" ? "(Not Human)" : "Human"} - {char.gender}</p>
                         <img src={char.image} alt={`image of ${char.name}`} />
                     </SingleCharDiv>
