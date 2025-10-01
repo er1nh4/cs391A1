@@ -19,6 +19,7 @@ const SingleCharDiv=styled.div<{status: string}>`
     color: ${(being) => (being.status === "Alive" ? 'green' : (being.status === "Dead") ? 'red' : 'yellow')};
     text-shadow: ${(being) => (being.status === "Alive" ? 'green 0 0 10px;' : (being.status === "Dead") ? 'red 0 0 10px' : 'yellow 0 0 10px')};
     border: 3px saddlebrown solid;
+    border-radius: 20px;
     font: normal bold calc(2px + 1vw) "Comic Sans MS", cursive, sans-serif;
     text-align: center;
 `;
